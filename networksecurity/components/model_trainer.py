@@ -27,14 +27,18 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 import mlflow.sklearn
-"""
+
 import dagshub
+
 dagshub.init(repo_owner='BALAKA-BHUVANESWARI', repo_name='Network-Security', mlflow=True)
 
-os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/BALAKA-BHUVANESWARI/Network-Security/mlflow"
+mlflow.set_tracking_uri("https://dagshub.com/BALAKA-BHUVANESWARI/Network-Security.mlflow")
+mlflow.set_experiment("network-security-experiment")
+
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/BALAKA-BHUVANESWARI/Network-Security.mlflow"
 os.environ["MLFLOW_TRACKING_USERNAME"]="BALAKA-BHUVANESWARI"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="6a20e5a98142c9f823a94a77f543edf1eeac5a8d" 
-"""
+os.environ["MLFLOW_TRACKING_PASSWORD"]="587c533a0ca2f84abf8a7b8f50520fd7bb619b08" 
+
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -46,9 +50,9 @@ class ModelTrainer:
         
     def track_mlflow(self,best_model,classificationmetric):
        
-       """mlflow.set_registry_uri("https://dagshub.com/BALAKA-BHUVANESWARI/Network-Security/mlflow")
+       mlflow.set_registry_uri("https://dagshub.com/BALAKA-BHUVANESWARI/Network-Security.mlflow")
 
-       tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme """
+       tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme 
        with mlflow.start_run():
              f1_score=classificationmetric.f1_score
              precision_score=classificationmetric.precision_score
@@ -56,14 +60,13 @@ class ModelTrainer:
              mlflow.log_metric("f1_score", f1_score)
              mlflow.log_metric("precision", precision_score)
              mlflow.log_metric("recall", recall_score)
-
-             mlflow.sklearn.log_model(sk_model=best_model,artifact_path="model")      
+             mlflow.sklearn.log_model(best_model,"model")    
 
 
 
            
         
-             """#Model registry does not work with file store
+             #Model registry does not work with file store
              if tracking_url_type_store != "file":
                 # Register the model
                 # There are other ways to use the Model Registry, which depends on the use case,
@@ -71,7 +74,7 @@ class ModelTrainer:
                 # https://mlflow.org/docs/latest/model-registry.html#api-workflow
                 mlflow.sklearn.log_model(best_model, "model")
              else:
-                mlflow.sklearn.log_model(best_model, "model") """
+                mlflow.sklearn.log_model(best_model, "model") 
 
 
         

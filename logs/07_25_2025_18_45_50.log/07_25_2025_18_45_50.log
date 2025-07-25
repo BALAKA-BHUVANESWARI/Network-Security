@@ -1,0 +1,29 @@
+[.2025-07-25 18:45:55,927]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[.2025-07-25 18:45:55,931]107dagshub -INFO-Accessing as BALAKA-BHUVANESWARI
+[.2025-07-25 18:45:56,563]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/repos/BALAKA-BHUVANESWARI/Network-Security "HTTP/1.1 200 OK"
+[.2025-07-25 18:45:57,138]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[.2025-07-25 18:45:57,138]107dagshub -INFO-Initialized MLflow to track repo "BALAKA-BHUVANESWARI/Network-Security"
+[.2025-07-25 18:45:57,138]107dagshub -INFO-Repository BALAKA-BHUVANESWARI/Network-Security initialized!
+[.2025-07-25 18:45:57,138]22root -INFO-Initiate the data ingestion
+[.2025-07-25 18:45:59,330]68root -INFO-Performed train test split on the dataframe
+[.2025-07-25 18:45:59,330]70root -INFO-Exited split_data_as_train_test method of Data_Ingestion class
+[.2025-07-25 18:45:59,330]78root -INFO-Exporting train and test file path.
+[.2025-07-25 18:45:59,393]87root -INFO-Exported train and test file path.
+[.2025-07-25 18:45:59,393]24root -INFO-Data Initiation Completed
+[.2025-07-25 18:45:59,431]28root -INFO-Initiate the data Validation
+[.2025-07-25 18:45:59,519]32root -INFO-Required number of columns:2
+[.2025-07-25 18:45:59,519]33root -INFO-Data frame has columns:31
+[.2025-07-25 18:45:59,519]32root -INFO-Required number of columns:2
+[.2025-07-25 18:45:59,519]33root -INFO-Data frame has columns:31
+[.2025-07-25 18:45:59,658]30root -INFO-data Validation Completed
+[.2025-07-25 18:45:59,665]33root -INFO-data Transformation started
+[.2025-07-25 18:45:59,665]63root -INFO-Entered initiate_data_transformation method of DataTransformation class
+[.2025-07-25 18:45:59,665]65root -INFO-Starting data transformation
+[.2025-07-25 18:45:59,695]48root -INFO-Entered get_data_trnasformer_object method of Trnasformation class
+[.2025-07-25 18:45:59,695]53root -INFO-Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[.2025-07-25 18:45:59,706]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-25 18:45:59,712]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-25 18:45:59,712]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-25 18:45:59,716]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-25 18:45:59,718]37root -INFO-data Transformation completed
+[.2025-07-25 18:45:59,718]39root -INFO-Model Training sstared
