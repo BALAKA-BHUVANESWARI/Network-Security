@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Data%20Science%20Project/Networksecurity%28c%29/mlruns/0/d38dd4fc98f34664821f58ad3abfaa30/artifacts
+end_time: 1753432047578
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d38dd4fc98f34664821f58ad3abfaa30
+run_name: calm-midge-693
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753432047329
+status: 4
+tags: []
+user_id: User

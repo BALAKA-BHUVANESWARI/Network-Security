@@ -11,3 +11,8 @@ tzdata==2025.2
 scikit-learn
 dill
 pyaml
+mlflow
+dagshub
+fastapi
+uvicorn
+
