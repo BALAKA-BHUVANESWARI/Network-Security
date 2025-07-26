@@ -45,7 +45,7 @@ app.add_middleware(
 )
 
 from fastapi.templating import Jinja2Templates
-templates = Jinja2Templates(directory="./templates")
+templates = Jinja2Templates(directory="./templates") 
 
 @app.get("/", tags=["authentication"])
 async def index():
@@ -59,7 +59,7 @@ async def train_route():
         return Response("Training is successful")
     except Exception as e:
         raise NetworkSecurityException(e,sys)
-    
+ 
 @app.post("/predict")
 async def predict_route(request: Request,file: UploadFile = File(...)):
     try:
@@ -81,7 +81,7 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
         return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
         
     except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) 
     
 if __name__=="__main__":
     app_run(app,host="localhost",port=8000)
