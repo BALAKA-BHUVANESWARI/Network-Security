@@ -1,0 +1,30 @@
+[.2025-07-28 01:07:12,180]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[.2025-07-28 01:07:12,187]107dagshub -INFO-Accessing as BALAKA-BHUVANESWARI
+[.2025-07-28 01:07:13,010]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/repos/BALAKA-BHUVANESWARI/Network-Security "HTTP/1.1 200 OK"
+[.2025-07-28 01:07:13,743]1026httpx -INFO-HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[.2025-07-28 01:07:13,743]107dagshub -INFO-Initialized MLflow to track repo "BALAKA-BHUVANESWARI/Network-Security"
+[.2025-07-28 01:07:13,743]107dagshub -INFO-Repository BALAKA-BHUVANESWARI/Network-Security initialized!
+[.2025-07-28 01:07:18,711]42root -INFO-Start data Ingestion
+[.2025-07-28 01:07:21,173]68root -INFO-Performed train test split on the dataframe
+[.2025-07-28 01:07:21,174]70root -INFO-Exited split_data_as_train_test method of Data_Ingestion class
+[.2025-07-28 01:07:21,175]78root -INFO-Exporting train and test file path.
+[.2025-07-28 01:07:21,284]87root -INFO-Exported train and test file path.
+[.2025-07-28 01:07:21,286]45root -INFO-Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts\\07_28_2025_01_07_05\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\07_28_2025_01_07_05\\data_ingestion\\ingested\\test.csv')
+[.2025-07-28 01:07:21,303]55root -INFO-Initiate the data Validation
+[.2025-07-28 01:07:21,448]32root -INFO-Required number of columns:2
+[.2025-07-28 01:07:21,448]33root -INFO-Data frame has columns:31
+[.2025-07-28 01:07:21,448]32root -INFO-Required number of columns:2
+[.2025-07-28 01:07:21,448]33root -INFO-Data frame has columns:31
+[.2025-07-28 01:07:21,732]63root -INFO-Entered initiate_data_transformation method of DataTransformation class
+[.2025-07-28 01:07:21,733]65root -INFO-Starting data transformation
+[.2025-07-28 01:07:21,762]48root -INFO-Entered get_data_trnasformer_object method of Trnasformation class
+[.2025-07-28 01:07:21,763]53root -INFO-Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[.2025-07-28 01:07:21,778]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-28 01:07:21,787]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-28 01:07:21,787]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-28 01:07:21,793]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-28 01:11:47,295]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-28 01:11:47,296]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-28 01:11:47,296]49root -INFO-Entered the save_object method of MainUtils class
+[.2025-07-28 01:11:47,378]53root -INFO-Exited the save_object method of MainUtils class
+[.2025-07-28 01:11:47,378]157root -INFO-Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\07_28_2025_01_07_05\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9911504424778761, precision_score=0.9904452124415531, recall_score=0.99185667752443), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9752, precision_score=0.9713147410358566, recall_score=0.9791164658634538))
