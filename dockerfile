@@ -1,15 +1,13 @@
-FROM python:3.12-slim-buster
+FROM python:3.12-slim
 
 WORKDIR /app
 COPY . /app
 
-# ✅ Correct installation of awscli with apt-get
-RUN apt-get update && \
-    apt-get install -y awscli && \
-    rm -rf /var/lib/apt/lists/*
+# Install system packages and awscli via pip
+RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir awscli
 
-# ✅ Install Python dependencies
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ✅ Run your app
 CMD ["python3", "app.py"]
